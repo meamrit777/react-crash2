@@ -1,0 +1,44 @@
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-varient: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-varient: rgba(77, 181, 255, 0.4);
+  /* --color-white: #ffff; */
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+.App {
+  text-align: center;
+}
+
+.Counter__container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.btn {
+  border-radius: 0.4rem;
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
