@@ -1,0 +1,12 @@
+body {
+  color: rgb(78, 78, 174);
+}
+::selection {
+  color: rgb(255, 255, 255);
+  background: #04a4cc;
+}
+.text-white {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
