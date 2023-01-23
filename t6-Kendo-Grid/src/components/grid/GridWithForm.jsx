@@ -12,6 +12,8 @@ const GridWithForm = ({
   onEditHandler,
   onDeleteHandler,
   onAddHandler,
+  onSubmitAdd,
+  onUpdatedHandler,
 }) => {
   const editDeleteCell = (dataItem) => {
     return (
@@ -31,12 +33,17 @@ const GridWithForm = ({
         <GridToolbar>
           <Button label="Add new" onClick={() => onAddHandler()} />
         </GridToolbar>
-        <Column field="ProductID" title="ID" />
+        <Column field="id" title="ID" />
         <Column field="ProductName" title="Name" />
         <Column field="Category.CategoryName" title="Category" />
+        <Column field="UnitPrice" title="Price" />
+        <Column field="UnitsInStock" title="In Stock" />
         <Column cell={editDeleteCell} /> {/* for two buttons edit and delete */}
       </Grid>
-      <FormDialog />
+      <FormDialog
+        onSubmitAdd={onSubmitAdd}
+        onUpdatedHandler={onUpdatedHandler}
+      />
     </>
   );
 };

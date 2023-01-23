@@ -4,7 +4,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.scss";
 import { FormContextProvider } from "./context/Form-Context";
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <FormContextProvider>

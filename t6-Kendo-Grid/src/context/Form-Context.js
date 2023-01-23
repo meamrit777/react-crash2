@@ -8,10 +8,6 @@ export function FormContextProvider(props) {
     dataItem: {},
   });
 
-  // const context = {
-  //   openDialog: openDialog,
-  //   setOpenDialog: setOpenDialog,
-  // };
   return (
     <FormContext.Provider value={{ openDialog, setOpenDialog }}>
       {props.children}

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
-
 const NewMeetups = () => {
   const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
-    fetch("https://react-crash2-default-rtdb.firebaseio.com/meetups.json", {
+    // fetch("https://react-crash2-default-rtdb.firebaseio.com/meetups.json", {
+    fetch("https://kendogridcrud-default-rtdb.firebaseio.com/form.json", {
       method: "POST",
       body: JSON.stringify(meetupData),
       headers: {
