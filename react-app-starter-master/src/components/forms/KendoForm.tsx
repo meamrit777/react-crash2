@@ -1,6 +1,5 @@
 import { Button } from '@progress/kendo-react-buttons';
 import { Field, Form, FormElement } from '@progress/kendo-react-form';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -64,14 +63,3 @@ const KendoForm = ({ buttonLabel, title, formFields, handleSubmit }: FormProps) 
 };
 
 export default KendoForm;
-
-KendoForm.propTypes = {
-    formFields: PropTypes.array,
-    onSubmit: PropTypes.func,
-};
-KendoForm.defaultProps = {
-    formFields: [{ label: 'Email', name: 'email', type: 'email', required: true }],
-    onSubmit: () => {
-        alert('handle sumbit clicked');
-    },
-};
