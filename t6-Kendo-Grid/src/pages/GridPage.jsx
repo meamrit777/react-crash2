@@ -11,7 +11,6 @@ const GridPage = () => {
   const { setOpenDialog } = useContext(FormContext);
   const endpoint = "http://localhost:3300/products";
   const [loadedData, setLoadedData] = useState();
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     axios
@@ -21,13 +20,7 @@ const GridPage = () => {
       })
       .catch();
   }, []);
-  const toggleDialog = () => {
-    // const response = await axios.delete(`${endpoint}/${data.dataItem.id}`);
-    setVisible(!visible);
-  };
-  const toogleCancel = () => {
-    setVisible(!visible);
-  };
+
   const editHandler = (dataItem) => {
     setOpenDialog({ isOpen: true, dataItem: dataItem });
   };
@@ -67,26 +60,6 @@ const GridPage = () => {
         onSubmitAdd={onSubmitAdd}
         onUpdatedHandler={onUpdatedHandler}
       />
-      {visible && (
-        <Dialog title={"Please confirm"} onClose={toogleCancel}>
-          <p
-            style={{
-              margin: "25px",
-              textAlign: "center",
-            }}
-          >
-            Are you sure you want to continue?
-          </p>
-          <DialogActionsBar>
-            <Button
-              style={{ background: "#007bff" }}
-              onClick={toggleDialog}
-              label="Yes"
-            />
-            <Button onClick={toogleCancel} label="No" />
-          </DialogActionsBar>
-        </Dialog>
-      )}
     </div>
   );
 };
