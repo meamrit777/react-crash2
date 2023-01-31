@@ -18,6 +18,7 @@ Primary.args = {
 
 export const Large = Template.bind({});
 Large.args = {
+  backgroundColor: "skyblue",
   size: "large",
   label: "Button",
 };

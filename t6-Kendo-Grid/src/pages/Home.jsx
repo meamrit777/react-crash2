@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/buttons/Button";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    <navigate to="/grid" />;
-  };
-  return <Button onClick={handleClick} label="GridPage" />;
+  return (
+    <Link
+      to="/grid"
+      style={{ border: "1px solid", padding: "4px", textDecoration: "none",background:"skyblue",borderRadius:'4px' }}
+    >
+      Grid Page ?
+    </Link>
+  );
 };
 
 export default Home;
