@@ -23,3 +23,12 @@
 .input-password {
     display: flex;
 }
+.home_page {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.feedback_form {
+    display: flex;
+    flex-direction: column;
+}

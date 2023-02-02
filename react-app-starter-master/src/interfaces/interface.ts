@@ -1,8 +1,8 @@
 export interface FormFieldsProps {
-    label: string;
+    label?: string;
     name: string;
     type?: string;
-    required: boolean;
+    required?: boolean;
     component: React.ElementType;
     validator?: any;
 }

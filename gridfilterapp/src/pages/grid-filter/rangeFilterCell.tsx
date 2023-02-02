@@ -4,13 +4,14 @@ import {
 } from "@progress/kendo-react-inputs";
 
 export const RangeFilterCell = (props: any) => {
+  console.log(props);
   let minTextBox: any;
   let maxTextBox: any;
 
   const inRange = (current: any, { min, max }: any) =>
     (min === null || current >= min) && (max === null || current <= max);
 
-  const onChange = (event: NumericTextBoxChangeEvent) => {
+  const onChange = (event: any) => {
     props.onChange({
       value: { min: minTextBox.value, max: maxTextBox.value },
       operator: inRange,

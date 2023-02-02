@@ -30,7 +30,6 @@ function GridPage() {
   const filterChange = (event: any) => {
     setData(filterBy(sampleProducts, event.filter));
     setFilter(event.filter);
-    console.log(event.filter);
   };
   return (
     <div className="App">
